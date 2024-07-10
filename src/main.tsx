@@ -75,7 +75,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <App />
       </Content>
       <Footer style={footerStyle}>
-        <Image src='/public/logo.png' width={'192px'}/>
+        <Image src='/logo.png' width={'192px'}/>
       </Footer>
     </div>
   </React.StrictMode>,
