@@ -9,6 +9,8 @@ function App() {
   const [form] = Form.useForm();
   const [visible, setVisible] = useState(true);
   const [messageApi, contextHolder] = message.useMessage();
+  const [link, setLink] = useState('');
+  const defaultCountry = 'BR';
 
   const newLink = () => {
     form.resetFields();
@@ -19,8 +21,6 @@ function App() {
     messageApi.info('Copiado para a área de transferência');
   };
 
-  const [link, setLink] = useState('https://api.whatsapp.com/send?');
-  const defaultCountry = 'BR';
 
   const onFinish = (values: any) => {
     try {
@@ -46,7 +46,8 @@ function App() {
                   name="control-hooks"
                   onFinish={onFinish}
                 >
-                  <Form.Item name="phone" label="Telefone" rules={[{ required: true, validator(rule, value, callback) {
+                  {/* @ts-ignore */}
+                  <Form.Item name="phone" label="Telefone" rules={[{ required: true, validator(role, value, callback) {
                     if(value && (value.countryCode + value.areaCode + value.phoneNumber).length  < 13) {
                       return Promise.reject();
                     }
@@ -55,7 +56,8 @@ function App() {
                   }, }]}>
                       <PhoneInput
                       placeholder="Insira seu telefone"
-                      defaultCountry={defaultCountry}
+                      // @ts-ignore
+                      defaultCountry={defaultCountry} 
                       limitMaxLength={true}
                       />
                   </Form.Item>
