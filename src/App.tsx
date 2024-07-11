@@ -4,6 +4,10 @@ import { Button, Flex, Form, message, Space } from 'antd';
 import PhoneInput from "antd-phone-input";
 import { useState } from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import axios from 'axios';
+
+const url = import.meta.env.VITE_ADD_CLICK;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 function App() {
   const [form] = Form.useForm();
@@ -29,6 +33,14 @@ function App() {
         const redirectLink = `https://api.whatsapp.com/send?phone=${phoneNumber}` + (values.message ? `&text=${values.message}` : '');
         setLink(redirectLink);
         setVisible(false);
+
+        const config = {
+          headers: {
+            'apiKey': apiKey
+          }
+        };
+
+        axios.get(url, config);
       }  
     } catch (error) {
       
