@@ -23,12 +23,12 @@
   background-color: #054640;
 }
 
-:where(.css-dev-only-do-not-override-98ntnt).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected {
+.ant-menu-item-selected {
   background-color: #128c7e !important;
 }
 
-:where(.css-98ntnt).ant-menu-dark.ant-menu-horizontal >.ant-menu-item-selected {
-  background-color: #128c7e !important;
+.ant-menu-item-active {
+  background-color: #054640 !important;
 }
 
 
