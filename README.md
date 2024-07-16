@@ -1,6 +1,6 @@
 # Gerador de links | Whatsapp
 
-## React + TypeScript + Vite
+## React + TypeScript + Vite + Ant
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/186f738f-e8eb-4281-9f5d-6fdec9a8b811/deploy-status)](https://app.netlify.com/sites/gerarlinkwpp/deploys)
 
