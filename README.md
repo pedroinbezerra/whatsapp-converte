@@ -4,31 +4,23 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/186f738f-e8eb-4281-9f5d-6fdec9a8b811/deploy-status)](https://app.netlify.com/sites/gerarlinkwpp/deploys)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto simples para geração de links de Whatsapp.
 
-Currently, two official plugins are available:
+Esse projeto depende do projeto [whatsapp-converte-counter](https://github.com/pedroinbezerra/whatsapp-converte-counter) para que funcione o contador de curtidas e o changelog.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para rodar o projeto localmente siga os seguintes passos:
 
-## Expanding the ESLint configuration
+ - Certifique-se de ter instalado o NodeJS na versão 20.14.10 ou superior.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+ - Instale as dependências usando o comando ``` npm run start:dev ```.
 
-- Configure the top-level `parserOptions` property like this:
+ - Configure o arquivo .env apontando para o projeto [whatsapp-converte-counter](https://github.com/pedroinbezerra/whatsapp-converte-counter) caso deseje usar o contador de curtidas e o changelog.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+ - Execute o comando ``` npm run dev ```, no terminal, na pasta do projeto.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+ - Finalmente, acesse a URL informada no console.
+
+![image](https://github.com/user-attachments/assets/a59916e9-5216-49d1-93e4-8198e4dc31ad)
+
+
+
