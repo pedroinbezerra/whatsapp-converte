@@ -75,7 +75,7 @@ function App() {
                   </Form.Item>
 
                   <Form.Item name="message" label="Mensagem" rules={[{ required: false }]}>
-                    <TextArea showCount maxLength={50} placeholder="Opcional" />
+                    <TextArea placeholder="Opcional" />
                   </Form.Item>
 
                   <Form.Item>
