@@ -18,7 +18,9 @@ Para rodar o projeto localmente siga os seguintes passos:
 
  - Execute o comando ``` npm run dev ```, no terminal, na pasta do projeto.
 
- - Finalmente, acesse a URL informada no console.
+ - Finalmente, acesse a URL informada no console.]
+
+[https://www.whats.pbdev.com.br](https://www.whats.pbdev.com.br)
 
 ![image](https://github.com/user-attachments/assets/a59916e9-5216-49d1-93e4-8198e4dc31ad)
 
