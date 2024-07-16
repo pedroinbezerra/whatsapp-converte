@@ -18,7 +18,12 @@ Para rodar o projeto localmente siga os seguintes passos:
 
  - Execute o comando ``` npm run dev ```, no terminal, na pasta do projeto.
 
- - Finalmente, acesse a URL informada no console.]
+ - Finalmente, acesse a URL informada no console.
+
+## Build de produção
+
+Para obter uma instância de produção do projeto, execute o comando ```npm run build```.
+Isso gerará uma pasta chamada dist que conterá todo o código e um arquivo index.html. 
 
 [https://www.whats.pbdev.com.br](https://www.whats.pbdev.com.br)
 
