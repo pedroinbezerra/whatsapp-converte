@@ -15,11 +15,7 @@
   background-image: url('/public/wppbg.png');
 }
 
-:where(.css-dev-only-do-not-override-98ntnt).ant-layout-header {
-  background-color: #054640;
-}
-
-:where(.css-98ntnt).ant-layout-header {
+.ant-layout-header {
   background-color: #054640;
 }
 
