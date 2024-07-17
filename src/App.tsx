@@ -17,7 +17,7 @@ function App() {
   const defaultCountry = 'BR';
 
   const newLink = () => {
-    form.resetFields();
+    form.resetFields(['message']);
     setVisible(true);
   };
 
@@ -28,9 +28,13 @@ function App() {
 
   const onFinish = (values: any) => {
     try {
-      const phoneNumber =  values.phone.countryCode + values.phone.areaCode + values.phone.phoneNumber;
+      const phoneNumber = values.phone.countryCode + values.phone.areaCode + values.phone.phoneNumber;
+
       if(phoneNumber.length === 13) {
-        const redirectLink = `https://api.whatsapp.com/send?phone=${phoneNumber}` + (values.message ? `&text=${values.message}` : '');
+
+        const message = encodeURIComponent(values.message);
+
+        const redirectLink = `https://api.whatsapp.com/send?phone=${phoneNumber}` + (message ? `&text=${message}` : '');
         setLink(redirectLink);
         setVisible(false);
 
