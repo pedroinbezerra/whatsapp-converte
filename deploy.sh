@@ -4,4 +4,4 @@
 
 echo "Atualizando projeto: Whatsapp converte"
 
-git pull && docker compose down --remove-orphans && docker compose up -d --build
+git pull && npm i && npm run build && rm -rf node-modules && docker compose down --remove-orphans && docker compose up -d --build
