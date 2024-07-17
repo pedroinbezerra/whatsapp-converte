@@ -136,7 +136,7 @@ const AppLayout: React.FC = () => {
           </Footer>
         </div>
       </>
-      <Modal title="Novidades" open={changelogModalOpen} onCancel={() => setChangelogModalOpen(false)} centered closable footer="">
+      <Modal title={`Novidades da versão ${localChangelogVersion}`} open={changelogModalOpen} onCancel={() => setChangelogModalOpen(false)} centered closable footer="">
         <ul>
           {
             

@@ -10,5 +10,15 @@ import { resolve } from 'path';
 dotenv.config({ path: resolve(__dirname, '.env') });
 
 export default defineConfig({
+  css: {
+    preprocessorOptions: {
+      scss: {
+        charset: false
+      }
+    }
+  },
   plugins: [react()],
+  build: {
+    minify: false
+  }
 })
