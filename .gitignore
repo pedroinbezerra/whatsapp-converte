@@ -16,6 +16,10 @@ package-lock.json
 # Environments
 .env
 
+# Removing lock files
+pnpm-lock.yaml
+package-lock.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
