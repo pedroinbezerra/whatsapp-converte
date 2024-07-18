@@ -4,4 +4,4 @@
 
 echo "Atualizando projeto: Whatsapp converte"
 
-git pull origin main && pnpm i && systemctl stop mysql && pnpm build && rm -rf node-modules && docker compose down --remove-orphans && docker compose up -d --build && systemctl restart mysql
+git pull origin main && pnpm i && pnpm build && rm -rf node-modules && docker compose down --remove-orphans && docker compose up -d --build
