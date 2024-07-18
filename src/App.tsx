@@ -34,7 +34,7 @@ function App() {
 
         const message = encodeURIComponent(values.message);
 
-        const redirectLink = `https://api.whatsapp.com/send?phone=${phoneNumber}` + (message ? `&text=${message}` : '');
+        const redirectLink = `https://api.whatsapp.com/send?phone=${phoneNumber}` + (message != 'undefined' ? `&text=${message}` : '');
         setLink(redirectLink);
         setVisible(false);
 
