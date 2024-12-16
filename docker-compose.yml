@@ -1,7 +1,17 @@
-version: '3.8'
-
 services:
   vite-app:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_GET_CLICKS: ${VITE_GET_CLICKS}
+        VITE_GET_CHANGELOG: ${VITE_GET_CHANGELOG}
+        VITE_ADD_CLICK: ${VITE_ADD_CLICK}
+        VITE_API_KEY: ${VITE_API_KEY}
     ports:
-      - "3080:80"
+      - "4173:4173" # Mapeia a porta 4173 do contêiner para a máquina host
+    command: [ "npm", "run", "preview", "--", "--host" ]
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
